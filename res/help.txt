@@ -1,0 +1,61 @@
+Menu Shortcuts
+Open file		CTRL + O
+Save As			CTRL + SHIFT + S
+Utilities	 	CTRL + U
+Exit			CTRL + W
+Copy			CTRL + C
+Paste			CTRL + V
+Options			CTRL + P
+Save State		CTRL + S
+Reset State		CTRL + R
+Clear			CTRL + SHIFT + R
+Check			CTRL + K
+Solve			CTRL + Space
+Debug			CTRL + D
+Help			F1
+About			CTRL + A
+
+Cliduko Shortcuts
+Load Puzzle				Ctrl + L
+Hide Candidate			Ctrl + Click
+Show/Hide Candidates	Cell Context Menu
+Unsolve Cell			Double Click Solved Cell
+
+Cliduko Debugger Shortcuts
+Start/Restart			CTRL + S
+Step					CTRL + T
+Run						CTRL + R
+Clear Console			CTRL + C
+Execute Command			CTRL + X
+Watch Facts				CTRL + F
+Watch Activations		CTRL + A
+Show Facts				CTRL + SHIFT + F
+Show Activations		CTRL + SHIFT + A
+
+Supported Files Formats
+.cld which is Clidoku's format (a series of  81 integers representing the grid line by line).
+.clp which is Clidoku's special formatted CLIPS file.
+.txt which contains a one line string of HoDoKu cells format (a string of 81 digits representing the grid).
+
+Notes
+Paste function expects a HoDoKu's one line string.
+Use Options window to select techniques that the solver should use.
+'Save State' will save a snapshot of the current state of the grid. Openning a file will overwrite en existing snapshot while pasting will not.
+'Reset' will restore the last saved snapshot.
+'Clear' will clear the entire grid (you can reset if you have a saved state).
+Once you ask the App to solve your puzzle, there is no way to stop it! It either finds a solution, doesn't find a solution or crash!
+The App may eat your CPU and then crash! that's a limitation of CLIPSJNI and maybe the rules file.
+
+Debugger
+It was intended for debugging Clidoku's CLIPS rules during development. Due to CLIPSJNI limitations and loss of interest, the GUI will often freeze while debugging. Try hiding facts and activations (and maybe unwatch activations as well).
+
+Utilities
+It's a format converter tool used to convert between supported file formats. It came to live when I needed a quick way to build .clp files from HoDoKu's one line strings. The GUI didn't exist at the time.
+Tips:
+	You can provide a second line of HoDoKu's one line string contains the solution of the puzzle supplied by the first line. The solution will appear in the corresponding .clp file, pretty printed as comment.
+	The batch converter uses source file extention to determine how to read the file. The output file will have the same name as the source one.
+
+About
+By Anas H. Sulaiman (ahs.pw).
+This is a rapidly developed prototype. It's far from being complete.
+Feel free to improve.

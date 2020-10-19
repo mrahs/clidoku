@@ -1,0 +1,18 @@
+.hyperlink:hover {
+	-fx-underline: false;
+}
+.hyperlink:visited {
+	-fx-text-fill: black;
+}
+.thick-border {
+	-fx-border-color: black;
+	-fx-border-width: 2;
+}
+.thin-border {
+	-fx-border-color: black;
+	-fx-border-width: 1;
+}
+
+.code {
+	-fx-font-family: monospace;
+}
